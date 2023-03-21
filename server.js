@@ -18,6 +18,11 @@ mongoose.set("strictQuery", true);
 //database connect
 MONGO_URL();
 
+//test api
+app.get("/", (req, res) => {
+  res.send("Hello from fiverr server!");
+});
+
 //middleware
 //This middleware is used for another system which system i want to get my jwt token key::://
 // app.use(cors({ origin: "http://127.0.0.1:5173", credentials: true }));
@@ -44,6 +49,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-const port = process.env.PORT || 8800;
+const port = process.env.PORT || 10000;
 
 app.listen(port, () => console.log(`Listening port is runnig at ${port}`));
