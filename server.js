@@ -20,7 +20,7 @@ MONGO_URL();
 
 //test api
 app.get("/", (req, res) => {
-  res.send("Hello from fiverr server!");
+  res.send("Hello From Fiverr Server!");
 });
 
 //middleware
